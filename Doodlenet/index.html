@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>doodle classifier</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.2"></script>
+  <script src="sketch.js"></script>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    button {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24pt;
+      margin-right: 10px;
+      border: 1px solid black;
+      background: white;
+    }
+
+    canvas {
+      border: 1px solid black;
+      margin: 20px 20px 0 0;
+    }
+
+    #grid {
+      display: flex;
+      justify-content: start;
+    }
+
+    #res {
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Doodle Classifier with 100 Classes</h1>
+  <p>A doodle classifier(CNN) trained on 100 classes from <a href="https://quickdraw.withgoogle.com/data" target="_blank">Quickdraw dataset</a></p>
+  <p>(220611)현재까지 개발 완료된 doodle classifier</p>
+  <button id="guess">guess</button>
+  <button id="clear">clear</button>
+  <div id="grid">
+    <div id="canvasContainer"></div>
+    <h3 id="res"></h3>
+  </div>
+  <p>
+    A list of object it can guess:<br>
+    airplane
+    angel
+    ant
+    apple
+    banana
+    baseball
+    basketball
+    bear
+    bee
+    bicycle
+    bird
+    birthday_cake
+    blueberry
+    book
+    bread
+    bus
+    butterfly
+    cake
+    car
+    carrot
+    cat
+    circle
+    clock
+    cloud
+    computer
+    cow
+    crocodile
+    crown
+    diamond
+    dog
+    dolphin
+    door
+    dragon
+    duck
+    ear
+    elephant
+    eraser
+    eye
+    face
+    firetruck
+    fish
+    flower
+    foot
+    giraffe
+    grapes
+    guitar
+    hand
+    hat
+    horse
+    house
+    ice_cream
+    kangaroo
+    key
+    leaf
+    leg
+    lion
+    lollipop
+    mermaid
+    monkey
+    moon
+    mountain
+    mouse
+    mouth
+    nose
+    ocean
+    octopus
+    panda
+    parrot
+    pear
+    pencil
+    penguin
+    piano
+    pig
+    pizza
+    police_car
+    potato
+    rabbit
+    rain
+    rainbow
+    river
+    shark
+    sheep
+    shoe
+    smiley_face
+    snake
+    snowman
+    soccer_ball
+    star
+    strawberry
+    sun
+    swan
+    teddy-bear
+    television
+    tiger
+    train
+    tree
+    umbrella
+    watermelon
+    whale
+    zebra    
+  </p>
+</body>
+
+</html>
